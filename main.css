@@ -1,4 +1,39 @@
-body {
-  padding: 20px;
-  background-color: pink;
+h1 {
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+input, select {
+  padding: 10px;
+}
+
+input, select, button {
+  margin: 10px;
+}
+
+.price {
+  display: flex;
+}
+
+button {
+  background-image: linear-gradient(to bottom, #59c173, #a17fe0, #5d26c1);
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  /* background: linear-gradient(to right, #59c173, #a17fe0, #5d26c1); */
+  background-image: linear-gradient(to bottom,#5d26c1, #a17fe0,#59c173);
+  border: none;
+  color: white;
+  font-size: 20px;
+  
 }

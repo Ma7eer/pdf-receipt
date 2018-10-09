@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
+
 <body>
-  <button>Press me!</button>
-  <script src="main.js"></script>
+
+  <h1>Generate PDF Receipt</h1>
+  <form class="container">
+    <input type="text" placeholder="Item purchased" />
+    <input type="number" placeholder="Quantity" value="1" />
+    <input type="date" placeholder="Transaction date" />
+    <input type="text" placeholder="Transaction ID" />
+    <select>
+      <option>Credit Card</option>
+      <option>Debit Card</option>
+      <option>Cash on Delivery</option>
+      <option>Coupon/tokens</option>
+    </select>
+    <div class="price">
+        <input type="number" placeholder="Transaction Amount" />
+        <select>
+          <option>USD</option>
+          <option>UK pound</option>
+          <option>OMR</option>
+        </select>
+    </div>
+    <button>Submit</button>
+
+  </form>
+
+  <script src="./lib/jsPDF.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
+
 </html>
