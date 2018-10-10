@@ -5,6 +5,7 @@ body, * {
 /* title styles */
 h1 {
   text-align: center;
+  margin: 0;
 }
 
 /* form styles */
@@ -14,10 +15,19 @@ h1 {
   padding: 10px;
 }
 
-input, select {
+.form-item {
+  display: flex;
+  flex-direction: column;
+}
+
+input, select, label {
   padding: 10px;
 }
 
+label {
+  padding-top: 2.5px;
+  padding-bottom: 0px;
+}
 input, select, button {
   margin: 10px;
 }
@@ -31,7 +41,9 @@ button {
   border: none;
   color: white;
   font-size: 20px;
-  padding: 12px;
+  padding: 10px;
+  margin-bottom: 0px;
+  margin-top: 6px;
   border-radius: 5px;
 }
 

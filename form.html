@@ -14,25 +14,49 @@
 
   <h1>Generate PDF Receipt</h1>
   <form class="container">
-    <input type="text" placeholder="Item purchased" />
-    <input type="number" placeholder="Quantity" value="1" />
-    <input type="date" placeholder="Transaction date" />
-    <input type="text" placeholder="Transaction ID" />
-    <select>
-      <option>Credit Card</option>
-      <option>Debit Card</option>
-      <option>Cash on Delivery</option>
-      <option>Coupon/tokens</option>
-    </select>
-    <div class="price">
+    <div class="form-item">
+      <label for="item-name">Item name:</label>
+      <input type="text" placeholder="Item purchased" id="item-name" />
+    </div>
+    <!--
+    <div class="form-item">
+        <label>Item name:</label>
+      <input type="number" placeholder="Quantity" value="1" />
+    </div> -->
+
+    <div class="form-item">
+      <label for="date">Transaction date:</label>
+      <input type="date" placeholder="Transaction date" id="date" />
+    </div>
+
+    <div class="form-item">
+      <label for="payment-id">Transaction Id:</label>
+      <input type="text" placeholder="Transaction ID" id="payment-id" />
+    </div>
+
+    <div class="form-item">
+      <label for="payment-method">Payment method:</label>
+      <select id="payment-method">
+        <option>Credit Card</option>
+        <option>Debit Card</option>
+        <option>Cash on Delivery</option>
+        <option>Coupon/tokens</option>
+      </select>
+    </div>
+
+    <div class="form-item">
+      <label for="price">Amount:</label>
+      <div class="price" id="price">
         <input type="number" placeholder="Transaction Amount" />
         <select>
           <option>USD</option>
           <option>UK pound</option>
           <option>OMR</option>
         </select>
+      </div>
     </div>
-    <button>Submit</button>
+
+    <button type="submit">Submit</button>
 
   </form>
 
