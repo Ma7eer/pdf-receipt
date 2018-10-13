@@ -4,10 +4,11 @@ const dateInput = document.getElementById('date');
 const idInput = document.getElementById('payment-id');
 const methodInput = document.getElementById('payment-method');
 const paymentInput = document.getElementById('amount');
+const unitInput = document.getElementById('unit');
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log("works");
+
   const doc = new jsPDF();
 
   doc.setFontSize(26);
@@ -21,7 +22,7 @@ form.addEventListener("submit", (event) => {
   doc.text(20, 65, `Transaction Date: ${date}`);
   doc.text(20, 85, `Transaction ID: ${id}`);
   doc.text(20, 105, `Payment Method: ${method}`);
-  doc.text(20, 125, `Charged Amount: ${payment}`);
+  doc.text(20, 125, `Charged Amount: ${payment} ${unit}`);
 
   doc.save('receipt.pdf');
 })
@@ -49,4 +50,9 @@ methodInput.addEventListener('input', (e) => {
 let payment = paymentInput.value;
 paymentInput.addEventListener('input', (e) => {
   payment = e.target.value;
+})
+
+let unit = unitInput.value;
+unitInput.addEventListener('input', (e) => {
+  unit = e.target.value;
 })
