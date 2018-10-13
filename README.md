@@ -6,3 +6,5 @@ Anytime you make a purchase you can add the payment information and create a pdf
 receipt
 
 ![](https://github.com/Ma7eer/pdf-receipt/blob/master/images/form.PNG)
+
+![](https://github.com/Ma7eer/pdf-receipt/blob/master/gifs/pdfReciept.gif)
